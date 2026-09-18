@@ -4,13 +4,15 @@ Desktop (Windows/Linux) and Android reader with offline Kokoro TTS.
 
 **Live Android tree is `MooReadAndroid/`, not `MooRead/android/`.**
 
-## Android screenshot
+## Android
 
-See [docs/ANDROID.md](docs/ANDROID.md). Three panels from a real device: theme picker, Amber CRT chrome, Amber CRT while speaking.
+![MooRead Android — theme picker, Amber CRT chrome, Amber CRT reading](docs/android-themes.jpg)
 
-Amber CRT keeps phosphor + scanlines + flicker. **Barrel / curved-screen warp was removed** so controls stay reachable.
+Amber CRT keeps phosphor, scanlines, and flicker. **Barrel / curved-screen warp was removed** so buttons stay hittable.
 
 Book files are not bundled. The *Tides of War* PDF used in testing is **not** in this repository.
+
+More notes: [docs/ANDROID.md](docs/ANDROID.md)
 
 ## Voice models
 
