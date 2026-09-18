@@ -1,0 +1,10 @@
+pillow
+pypdf
+striprtf
+python-docx
+ebooklib
+pypdfium2
+numpy
+soundfile
+onnxruntime
+kokoro-onnx
