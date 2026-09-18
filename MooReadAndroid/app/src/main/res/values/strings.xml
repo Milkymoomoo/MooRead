@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MooRead</string>
+    <color name="bg">#121417</color>
+    <color name="paper">#121417</color>
+    <color name="ink">#E8EDF2</color>
+    <color name="muted">#9AA7B2</color>
+    <color name="player">#0B0D10</color>
+    <color name="meadow">#3D8B4A</color>
+    <color name="button_text">#F3F7EF</color>
+    <color name="ic_launcher_background">#121417</color>
+</resources>
