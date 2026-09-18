@@ -13,3 +13,6 @@ local.properties
 python/
 MooRead.exe
 .DS_Store
+*.pdf
+World of Warcraft*
+*Tides of War*
