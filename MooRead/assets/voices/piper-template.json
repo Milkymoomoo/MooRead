@@ -1,0 +1,23 @@
+{
+  "format": "mooread-voice-profile/v1",
+  "id": "piper-template",
+  "name": "Piper Neural Template",
+  "engine": "piper",
+  "locale": "en-US",
+  "notes": "Copy this file, set piper_onnx to your local .onnx voice, and import it in MooRead. Piper models are not bundled because they are large; drop any Piper-compatible ONNX + JSON pair beside this profile.",
+  "piper_onnx": "voices/en_US-lessac-medium.onnx",
+  "piper_config": "voices/en_US-lessac-medium.onnx.json",
+  "style": {
+    "rate": 1.0,
+    "pitch": 1.0,
+    "volume": 1.0,
+    "emotion_bias": "warm",
+    "diction": "narrative",
+    "pause_sentence_ms": 260,
+    "pause_paragraph_ms": 480,
+    "dialogue_pitch_shift": 0.05,
+    "heading_rate_scale": 0.92,
+    "emphasis_rate_scale": 0.96
+  },
+  "lexicon": {}
+}

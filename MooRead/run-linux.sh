@@ -6,6 +6,7 @@ cd "$ROOT"
 export PYTHONPATH="$ROOT:${PYTHONPATH:-}"
 
 if [[ -n "${WAYLAND_DISPLAY:-}" && -z "${DISPLAY:-}" ]]; then
+  # Tk speaks X11. On pure Wayland start XWayland if needed.
   export DISPLAY=":0"
 fi
 export GDK_BACKEND="${GDK_BACKEND:-x11}"

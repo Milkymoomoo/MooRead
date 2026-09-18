@@ -74,6 +74,7 @@ class WallpaperPlayer(private val view: TextureView) : TextureView.SurfaceTextur
                 it.isLooping = true
                 it.start()
             }
+            // Belt and braces: some devices ignore isLooping.
             mp.setOnCompletionListener { ended ->
                 try {
                     ended.isLooping = true

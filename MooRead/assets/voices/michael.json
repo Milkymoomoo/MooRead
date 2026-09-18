@@ -1,0 +1,19 @@
+{
+  "format": "mooread-voice-profile/v1",
+  "id": "michael",
+  "name": "Michael — lecture",
+  "engine": "kokoro",
+  "kokoro_voice": "am_michael",
+  "locale": "en-US",
+  "notes": "American male lecture voice from bundled Kokoro-82M.",
+  "style": {
+    "rate": 0.97,
+    "pitch": 1.0,
+    "volume": 1.0,
+    "emotion_bias": "grave",
+    "diction": "lecture",
+    "pause_sentence_ms": 250,
+    "pause_paragraph_ms": 460
+  },
+  "lexicon": {}
+}

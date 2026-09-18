@@ -1,0 +1,17 @@
+{
+  "format": "mooread-voice-profile/v1",
+  "id": "japanese",
+  "name": "Alpha — Japanese narrator",
+  "engine": "kokoro",
+  "kokoro_voice": "jf_alpha",
+  "locale": "ja-JP",
+  "notes": "Used automatically for untranslated Japanese. English voices are used after JA→EN translation.",
+  "style": {
+    "rate": 1.0,
+    "pitch": 1.0,
+    "volume": 1.0,
+    "emotion_bias": "warm",
+    "diction": "narrative"
+  },
+  "lexicon": {}
+}

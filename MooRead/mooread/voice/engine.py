@@ -20,6 +20,7 @@ KOKORO_DIR = ROOT / "engine" / "kokoro"
 KOKORO_MODEL = KOKORO_DIR / "kokoro-v1.0.int8.onnx"
 KOKORO_VOICES = KOKORO_DIR / "voices-v1.0.bin"
 
+# Human-facing names for the bundled Kokoro-82M speakers.
 KOKORO_LABELS = {
     "af_heart": "Heart — warm American narrator",
     "af_bella": "Bella — clear American storyteller",
@@ -58,7 +59,11 @@ KOKORO_LABELS = {
 
 
 class VoiceEngine:
-    """Bundled Kokoro-82M neural TTS. Runs entirely on-device via ONNX."""
+    """Bundled Kokoro-82M neural TTS. Runs entirely on-device via ONNX.
+
+    System SAPI is not used. A profile may still point at a custom Kokoro
+    style vector file so you can drop in a new speaking identity.
+    """
 
     def __init__(self) -> None:
         self._lock = threading.Lock()
@@ -116,6 +121,8 @@ class VoiceEngine:
         hint = hint or ProsodyHint()
         spoken = apply_lexicon(text, profile.lexicon)
         speed = max(0.6, min(1.6, profile.style.rate * hint.rate_scale * rate_user))
+        # Kokoro has no separate pitch input; map a little of pitch into speed
+        # so a "brighter" request does not get swallowed, without chipmunking.
         if pitch_user != 1.0:
             speed *= 1.0 + (pitch_user - 1.0) * 0.15
         voice = self._resolve_voice(profile, spoken)

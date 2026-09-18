@@ -1,0 +1,22 @@
+{
+  "format": "mooread-voice-profile/v1",
+  "id": "storyteller",
+  "name": "Heart — storyteller",
+  "engine": "kokoro",
+  "kokoro_voice": "af_heart",
+  "locale": "en-US",
+  "notes": "Bundled Kokoro-82M speaker. Natural narrative default.",
+  "style": {
+    "rate": 1.0,
+    "pitch": 1.0,
+    "volume": 1.0,
+    "emotion_bias": "warm",
+    "diction": "narrative",
+    "pause_sentence_ms": 280,
+    "pause_paragraph_ms": 520
+  },
+  "lexicon": {
+    "EPUB": "E-pub",
+    "MooRead": "Moo Read"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "format": "mooread-voice-profile/v1",
+  "id": "blend-warm",
+  "name": "Blend — Heart + Bella",
+  "engine": "kokoro",
+  "kokoro_voice": "af_heart",
+  "style_mix": {
+    "af_heart": 0.55,
+    "af_bella": 0.45
+  },
+  "locale": "en-US",
+  "notes": "Example of a custom identity: two bundled style vectors mixed in-memory. Import your own JSON and mix any Kokoro speaker ids, or point voice_vector at a .npy style file.",
+  "style": {
+    "rate": 1.0,
+    "pitch": 1.0,
+    "volume": 1.0,
+    "emotion_bias": "warm",
+    "diction": "narrative",
+    "pause_sentence_ms": 270,
+    "pause_paragraph_ms": 500
+  },
+  "lexicon": {}
+}

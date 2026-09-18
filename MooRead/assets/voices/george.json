@@ -1,0 +1,19 @@
+{
+  "format": "mooread-voice-profile/v1",
+  "id": "george",
+  "name": "George — British documentary",
+  "engine": "kokoro",
+  "kokoro_voice": "bm_george",
+  "locale": "en-GB",
+  "notes": "British male from bundled Kokoro-82M.",
+  "style": {
+    "rate": 0.98,
+    "pitch": 1.0,
+    "volume": 1.0,
+    "emotion_bias": "neutral",
+    "diction": "documentary",
+    "pause_sentence_ms": 260,
+    "pause_paragraph_ms": 480
+  },
+  "lexicon": {}
+}

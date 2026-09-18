@@ -1,0 +1,8 @@
+MooRead can open images, scanned pages, EPUBs, PDFs, and plain text.
+
+When you press Play, the local voice engine speaks the current block while
+the next block is already being prepared in a warm buffer. After a block is
+finished, its audio is discarded so memory stays flat even in a long book.
+
+Voice profiles are JSON files. Import one to change rate, pitch, diction,
+lexicon, and (on Windows) a Piper neural model path.

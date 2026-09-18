@@ -1,0 +1,19 @@
+{
+  "format": "mooread-voice-profile/v1",
+  "id": "documentary",
+  "name": "Nicole — documentary",
+  "engine": "kokoro",
+  "kokoro_voice": "af_nicole",
+  "locale": "en-US",
+  "notes": "Even, nonfiction register on the bundled Kokoro model.",
+  "style": {
+    "rate": 0.98,
+    "pitch": 1.0,
+    "volume": 1.0,
+    "emotion_bias": "neutral",
+    "diction": "documentary",
+    "pause_sentence_ms": 240,
+    "pause_paragraph_ms": 420
+  },
+  "lexicon": {}
+}

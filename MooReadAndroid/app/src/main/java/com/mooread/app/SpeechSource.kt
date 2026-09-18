@@ -100,8 +100,10 @@ class SpeechSource(private val ocr: OcrHelper) {
     }
 
     fun dropBefore(index: Int) {
+        // Keep strings for the reader window; only trim very old pages.
         synchronized(lock) {
             if (index < 8) return
+            // leave list indices stable so cursor math stays valid
         }
     }
 
