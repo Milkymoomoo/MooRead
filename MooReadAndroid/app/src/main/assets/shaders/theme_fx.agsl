@@ -1,0 +1,48 @@
+uniform shader uContent;
+uniform float2 iResolution;
+uniform float uTime;
+uniform float uMode;
+
+half4 main(float2 fragCoord) {
+    float2 uv = fragCoord / max(iResolution, float2(1.0, 1.0));
+    float2 centered = uv * 2.0 - 1.0;
+    float mode = uMode;
+    float2 px = fragCoord;
+    px.x = clamp(px.x, 0.5, iResolution.x - 0.5);
+    px.y = clamp(px.y, 0.5, iResolution.y - 0.5);
+    half4 color = uContent.eval(px);
+    float lum = dot(float3(color.r, color.g, color.b), float3(0.299, 0.587, 0.114));
+
+    if (mode > 0.5 && mode < 1.5) {
+        float3 amber = float3(1.0, 0.62, 0.0);
+        float3 phosphor = float3(lum, lum, lum) * amber * 1.35;
+        phosphor += amber * 0.18 * lum * lum;
+        float scan = 0.55 + 0.45 * sin(fragCoord.y * 3.14159);
+        float flicker = 0.92 + 0.08 * sin(uTime * 37.0);
+        float vig = 1.0 - 0.55 * dot(centered, centered);
+        phosphor *= scan * flicker * vig;
+        color = half4(half3(phosphor), color.a);
+    } else if (mode > 1.5 && mode < 2.5) {
+        float lifted = clamp(lum * 1.08 + 0.06, 0.0, 1.0);
+        float3 silver = float3(lifted * 0.90, lifted * 0.90, lifted * 0.96);
+        silver += float3(0.07 * (1.0 - uv.y));
+        color = half4(half3(silver), color.a);
+    } else if (mode > 2.5) {
+        float3 dark = float3(0.059, 0.220, 0.059);
+        float3 mid = float3(0.188, 0.384, 0.188);
+        float3 lite = float3(0.545, 0.675, 0.059);
+        float3 lite2 = float3(0.608, 0.737, 0.059);
+        float3 lcd = dark;
+        if (lum >= 0.22 && lum < 0.45) lcd = mid;
+        else if (lum >= 0.45 && lum < 0.72) lcd = lite;
+        else if (lum >= 0.72) lcd = lite2;
+        float grid = 1.0;
+        if (mod(fragCoord.x, 3.0) < 0.85 || mod(fragCoord.y, 3.0) < 0.85) {
+            grid = 0.62;
+        }
+        lcd *= grid;
+        float vig = 1.0 - 0.32 * dot(centered, centered);
+        color = half4(half3(lcd * vig), color.a);
+    }
+    return color;
+}
