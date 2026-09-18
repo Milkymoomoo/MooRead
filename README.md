@@ -9,7 +9,7 @@ Desktop (Windows/Linux) and Android reader with offline Kokoro TTS.
 
 Amber CRT keeps phosphor, scanlines, and flicker. **Barrel / curved-screen warp was removed** so buttons stay hittable.
 
-Book files are not bundled. The *Tides of War* PDF used in testing is **not** in this repository.
+Book files are not bundled. The *Tides of War* used in testing is **not** in this repository.
 
 More notes: [docs/ANDROID.md](docs/ANDROID.md)
 
