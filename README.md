@@ -5,7 +5,6 @@ Desktop (Windows/Linux) and Android reader with offline Kokoro TTS.
 **Live Android tree is `MooReadAndroid/`, not `MooRead/android/`.**
 
 ## Android
-
 ![MooRead Android — theme picker, Amber CRT chrome, Amber CRT reading](docs/android-themes.jpg)
 
 Amber CRT keeps phosphor, scanlines, and flicker. **Barrel / curved-screen warp was removed** so buttons stay hittable.
